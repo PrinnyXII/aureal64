@@ -1,0 +1,83 @@
+{
+  "jogador": {
+    "nome": "Aventureiro",
+    "localizacao_atual": "vila_pedra_alta_taverna",
+    "inventario_simples": ["mochila velha", "adaga enferrujada", "10 moedas de cobre"]
+  },
+  "personagens": [
+    {
+      "id": "npc_barman_gordo",
+      "nome": "Borin, o Barman",
+      "descricao_curta": "Um anão corpulento com uma barba trançada e um avental manchado de cerveja.",
+      "personalidade": ["jovial", "fofoqueiro", "gosta de uma boa piada", "leal aos amigos"],
+      "conhecimentos_chave": [
+        "sabe de todos os últimos boatos da vila",
+        "pode indicar onde encontrar Elara, a herbolária",
+        "prepara um ensopado de coelho famoso"
+      ],
+      "localizacao_padrao": "vila_pedra_alta_taverna",
+      "dialogo_exemplo": "Bem-vindo à 'Caneca Rachada', forasteiro! O que vai ser hoje? Cerveja, hidromel, ou talvez um prato do meu famoso ensopado?"
+    },
+    {
+      "id": "npc_herbolaria_elara",
+      "nome": "Elara, a Herbolária",
+      "descricao_curta": "Uma mulher de meia-idade com olhos gentis e mãos manchadas de terra, carrega uma cesta de ervas.",
+      "personalidade": ["calma", "sábia", "reservada com estranhos", "ama a natureza"],
+      "conhecimentos_chave": [
+        "conhece curas para doenças comuns e venenos simples",
+        "procura por uma flor rara chamada 'Orvalho da Serpente' nas Colinas Sussurrantes",
+        "desconfia de magia muito poderosa"
+      ],
+      "localizacao_padrao": "vila_pedra_alta_loja_elara",
+      "dialogo_exemplo": "Olá, jovem. O que o traz à minha humilde loja? Procura alguma erva em particular ou talvez uma poção?"
+    },
+    {
+      "id": "npc_guarda_ranzinza",
+      "nome": "Guarda Torvin",
+      "descricao_curta": "Um guarda de armadura gasta e expressão cansada, encostado no portão da vila.",
+      "personalidade": ["ranzinza", "cético", "cumpridor de ordens", "secretamente sonha com aventuras"],
+      "conhecimentos_chave": [
+        "sabe sobre os perigos recentes nas estradas (lobos ou bandidos)",
+        "não permite a entrada de 'desordeiros' na vila após o anoitecer",
+        "ouviu rumores sobre ruínas antigas nas Colinas Sussurrantes"
+      ],
+      "localizacao_padrao": "vila_pedra_alta_portao",
+      "dialogo_exemplo": "Hmph. Mais um aventureiro, imagino. Mantenha-se na linha e não cause problemas, ou terá que se ver comigo."
+    }
+  ],
+  "locais": [
+    {
+      "id": "vila_pedra_alta_taverna",
+      "nome": "Taverna A Caneca Rachada",
+      "descricao_longa": "A taverna é um lugar barulhento e esfumaçado, cheio de conversas animadas e o cheiro de cerveja e comida caseira. Mesas de madeira rústica estão espalhadas pelo salão principal, e um balcão robusto domina um dos lados, onde Borin serve seus clientes.",
+      "npcs_presentes_padrao": ["npc_barman_gordo"],
+      "eventos_possiveis_aqui": ["ouvir um boato importante", "conseguir uma missão de Borin", "arrumar uma briga (se provocar)"]
+    },
+    {
+      "id": "vila_pedra_alta_loja_elara",
+      "nome": "Loja de Ervas da Elara",
+      "descricao_longa": "Um pequeno estabelecimento com prateleiras repletas de potes de vidro contendo ervas secas, pós coloridos e líquidos borbulhantes. O ar é preenchido com uma mistura de aromas doces e terrosos. Elara geralmente está atrás de um pequeno balcão, moendo ingredientes.",
+      "npcs_presentes_padrao": ["npc_herbolaria_elara"],
+      "eventos_possiveis_aqui": ["comprar poções de cura", "iniciar a missão da 'Orvalho da Serpente'", "aprender sobre plantas locais"]
+    },
+    {
+      "id": "vila_pedra_alta_portao",
+      "nome": "Portão Principal de Pedra Alta",
+      "descricao_longa": "O portão principal da vila é feito de madeira grossa reforçada com ferro, ladeado por duas pequenas torres de vigia. Durante o dia, geralmente está aberto, com um ou dois guardas de plantão.",
+      "npcs_presentes_padrao": ["npc_guarda_ranzinza"],
+      "eventos_possiveis_aqui": ["obter informações sobre os arredores", "ser impedido de entrar/sair dependendo da hora ou situação"]
+    },
+    {
+      "id": "colinas_sussurrantes_entrada",
+      "nome": "Entrada das Colinas Sussurrantes",
+      "descricao_longa": "O caminho para as Colinas Sussurrantes começa aqui. A vegetação é mais densa e o vento parece carregar murmúrios estranhos. Pegadas de animais selvagens são visíveis na terra macia.",
+      "npcs_presentes_padrao": [],
+      "eventos_possiveis_aqui": ["encontrar rastros de lobos", "avistar as ruínas ao longe", "sentir uma presença estranha"]
+    }
+  ],
+  "regras_mundo_simples": [
+    "Magia existe, mas não é comum entre todos.",
+    "As noites podem ser perigosas fora das vilas seguras.",
+    "A reputação do jogador pode influenciar como os NPCs reagem."
+  ]
+}
