@@ -3,6 +3,14 @@
     "nome": "Aventureiro",
     "localizacao_atual": "vila_pedra_alta_taverna",
     "inventario_simples": ["mochila velha", "adaga enferrujada", "10 moedas de cobre"]
+  {
+    "id": "magia_teleporte_curto",
+    "nome": "Teleporte Curto",
+    "descricao": "Permite teleportar para um local visível ou muito familiar a curta distância.",
+    "condicoes_uso": ["requer concentração", "cansa o usuário"],
+    "efeito_no_jogo": "mudar_localizacao_para_adjacente_ou_conhecido" // Isso seria interpretado pelo seu código Python
+  }
+]
   },
   "personagens": [
     {
