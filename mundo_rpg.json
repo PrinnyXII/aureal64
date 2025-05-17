@@ -107,7 +107,7 @@
             "npc_id_alvo": "npc_barman_gordo",
             "nome_alvo_para_busca": ["borin", "barman", "anão da taverna"],
             "detalhes": [
-              "Borin é um bom anão, barulhento mas de bom coração. A taverna dele é o coração da vila.",
+              "Borin é um bom anão, de coração grande, embora um tanto barulhento. A taverna dele é o coração da vila.",
               "Ele é uma fonte inesgotável de... informações, digamos. E o ensopado dele não é ruim, admito.",
               "Às vezes ele me pede algumas ervas especiais para suas... 'criações culinárias'."
             ],
@@ -273,7 +273,7 @@
       "nome": "Lia",
       "descricao_curta": "Uma jovem com olhar determinado, mas marejado de preocupação, segurando um pequeno boneco de pano.",
       "personalidade": ["determinada", "assustada mas tentando ser corajosa", "esperançosa", "um pouco ingênua sobre os perigos reais"],
-      "localizacao_padrao": "vila_pedra_alta_portao", # Perto do portão, talvez falando com Torvin
+      "localizacao_padrao": "vila_pedra_alta_portao",
       "dialogo_exemplo": "Por favor, senhor(a), você viu um menininho chamado Timmy? Ele é meu irmão...",
       "conhecimentos_especificos": {
         "sobre_npcs": [
