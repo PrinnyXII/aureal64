@@ -9,40 +9,138 @@
       "id": "npc_barman_gordo",
       "nome": "Borin, o Barman",
       "descricao_curta": "Um anão corpulento com uma barba trançada e um avental manchado de cerveja.",
-      "personalidade": ["jovial", "fofoqueiro", "gosta de uma boa piada", "leal aos amigos"],
-      "conhecimentos_chave": [
-        "sabe de todos os últimos boatos da vila",
-        "pode indicar onde encontrar Elara, a herbolária",
-        "prepara um ensopado de coelho famoso"
-      ],
+      "personalidade": ["jovial", "fofoqueiro", "gosta de uma boa piada", "leal aos amigos", "orgulhoso de seu ensopado"],
       "localizacao_padrao": "vila_pedra_alta_taverna",
-      "dialogo_exemplo": "Bem-vindo à 'Caneca Rachada', forasteiro! O que vai ser hoje? Cerveja, hidromel, ou talvez um prato do meu famoso ensopado?"
+      "dialogo_exemplo": "Bem-vindo à 'Caneca Rachada', forasteiro! O que vai ser hoje?",
+      "conhecimentos_especificos": {
+        "sobre_npcs": [
+          {
+            "npc_id_alvo": "npc_herbolaria_elara",
+            "nome_alvo_para_busca": ["elara", "herbolária"],
+            "detalhes": [
+              "Elara é uma alma gentil e muito sábia com as plantas.",
+              "Ela está sempre em busca de ingredientes raros para suas poções.",
+              "Mencionou que a 'Orvalho da Serpente' das Colinas Sussurrantes é vital para uma cura importante.",
+              "Às vezes ela parece um pouco triste, como se carregasse um peso."
+            ],
+            "tags_relacionadas": ["elara", "ervas", "poções", "orvalho_da_serpente", "colinas_sussurrantes", "cura"]
+          },
+          {
+            "npc_id_alvo": "npc_guarda_ranzinza",
+            "nome_alvo_para_busca": ["torvin", "guarda", "guarda ranzinza"],
+            "detalhes": [
+              "Torvin? Ah, um bom sujeito no fundo, mas com uma casca dura. Leva o trabalho a sério.",
+              "Ele se preocupa muito com a segurança da vila, talvez até demais às vezes.",
+              "Ouvi ele resmungando sobre 'aqueles malditos lobos' de novo outro dia."
+            ],
+            "tags_relacionadas": ["torvin", "guarda", "segurança", "vila", "lobos"]
+          }
+        ],
+        "sobre_locais": [
+          {
+            "local_id_alvo": "colinas_sussurrantes_entrada",
+            "nome_alvo_para_busca": ["colinas sussurrantes", "colinas"],
+            "detalhes": [
+              "As Colinas Sussurrantes... um lugar bonito, mas traiçoeiro. Não vá despreparado.",
+              "Dizem que há ruínas antigas escondidas por lá, talvez tesouros... ou problemas.",
+              "Elara costuma ir lá, mas sempre com cautela."
+            ],
+            "tags_relacionadas": ["colinas_sussurrantes", "perigo", "ruinas", "exploração", "elara"]
+          },
+          {
+            "local_id_alvo": "vila_pedra_alta_loja_elara",
+            "nome_alvo_para_busca": ["loja de elara", "loja da herbolária", "loja de ervas"],
+            "detalhes": [
+              "A loja da Elara é um lugar fascinante, cheia de cheiros estranhos e maravilhosos.",
+              "Se precisar de qualquer coisa relacionada a ervas ou uma poção simples, é lá o lugar."
+            ],
+            "tags_relacionadas": ["elara", "loja", "ervas", "poções"]
+          }
+        ],
+        "sobre_topicos_gerais": [
+          {
+            "topico_chave_para_busca": ["rumores", "novidades", "fofocas", "o que anda acontecendo"],
+            "detalhes": [
+              "Os boatos dizem que os lobos perto da estrada leste estão mais agressivos ultimamente.",
+              "Um mercador com um capuz esquisito passou pela vila semana passada, agindo de forma suspeita. Não parou na taverna, o que já é estranho.",
+              "Ouvi dizer que o velho Mago Elminster pode estar de passagem pela região, mas isso é só papo de bêbado, provavelmente."
+            ],
+            "tags_relacionadas": ["rumores", "vila", "lobos", "estrada_leste", "mercador", "mago_elminster"]
+          },
+          {
+            "topico_chave_para_busca": ["ensopado", "comida", "especialidade"],
+            "detalhes": [
+              "Ah, meu ensopado de coelho! É famoso por uma razão, meu caro! Segredo de família, com as melhores ervas (algumas que a Elara me fornece) e muito amor!"
+            ],
+            "tags_relacionadas": ["comida", "receita", "especialidade_da_casa"]
+          }
+        ]
+      }
     },
     {
       "id": "npc_herbolaria_elara",
       "nome": "Elara, a Herbolária",
-      "descricao_curta": "Uma mulher de meia-idade com olhos gentis e mãos manchadas de terra, carrega uma cesta de ervas.",
-      "personalidade": ["calma", "sábia", "reservada com estranhos", "ama a natureza"],
-      "conhecimentos_chave": [
-        "conhece curas para doenças comuns e venenos simples",
-        "procura por uma flor rara chamada 'Orvalho da Serpente' nas Colinas Sussurrantes",
-        "desconfia de magia muito poderosa"
-      ],
+      "descricao_curta": "Uma mulher de meia-idade com olhos gentis e mãos manchadas de terra.",
+      "personalidade": ["calma", "sábia", "reservada com estranhos", "ama a natureza", "preocupada com algo"],
       "localizacao_padrao": "vila_pedra_alta_loja_elara",
-      "dialogo_exemplo": "Olá, jovem. O que o traz à minha humilde loja? Procura alguma erva em particular ou talvez uma poção?"
+      "dialogo_exemplo": "Paz e boas ervas para você. Como posso ajudar?",
+      "conhecimentos_especificos": {
+        "sobre_npcs": [
+          {
+            "npc_id_alvo": "npc_barman_gordo",
+            "nome_alvo_para_busca": ["borin", "barman"],
+            "detalhes": [
+              "Borin é um bom anão, de coração grande, embora um tanto barulhento.",
+              "Ele realmente se esforça no ensopado dele, e às vezes me pede dicas de temperos.",
+              "Ele é o centro das fofocas da vila, se quiser saber de algo, fale com ele."
+            ],
+            "tags_relacionadas": ["borin", "taverna", "fofoca", "comida"]
+          }
+        ],
+        "sobre_locais": [
+          {
+            "local_id_alvo": "colinas_sussurrantes_entrada",
+            "nome_alvo_para_busca": ["colinas sussurrantes", "colinas"],
+            "detalhes": [
+              "As Colinas Sussurrantes guardam muitas plantas raras, incluindo a Orvalho da Serpente que tanto necessito.",
+              "É preciso ter cuidado, no entanto. Há perigos por lá, e não apenas animais selvagens.",
+              "Sinto uma energia estranha vinda das ruínas às vezes."
+            ],
+            "tags_relacionadas": ["colinas_sussurrantes", "ervas_raras", "orvalho_da_serpente", "pesquisa", "perigo", "ruinas"]
+          }
+        ],
+        "sobre_topicos_gerais": [
+          {
+            "topico_chave_para_busca": ["orvalho da serpente", "cura", "poção importante"],
+            "detalhes": [
+              "A Orvalho da Serpente é uma flor prateada que só desabrocha sob a luz da lua cheia perto de rochas úmidas nas Colinas.",
+              "É o ingrediente chave para uma poção que pode neutralizar um veneno raro que aflige alguém... importante.",
+              "Tenho tido dificuldade em encontrá-la ultimamente."
+            ],
+            "tags_relacionadas": ["orvalho_da_serpente", "ingrediente_raro", "missão_pessoal", "veneno"]
+          }
+        ]
+      }
     },
     {
       "id": "npc_guarda_ranzinza",
       "nome": "Guarda Torvin",
-      "descricao_curta": "Um guarda de armadura gasta e expressão cansada, encostado no portão da vila.",
+      "descricao_curta": "Um guarda de armadura gasta e expressão cansada.",
       "personalidade": ["ranzinza", "cético", "cumpridor de ordens", "secretamente sonha com aventuras"],
-      "conhecimentos_chave": [
-        "sabe sobre os perigos recentes nas estradas (lobos ou bandidos)",
-        "não permite a entrada de 'desordeiros' na vila após o anoitecer",
-        "ouviu rumores sobre ruínas antigas nas Colinas Sussurrantes"
-      ],
       "localizacao_padrao": "vila_pedra_alta_portao",
-      "dialogo_exemplo": "Hmph. Mais um aventureiro, imagino. Mantenha-se na linha e não cause problemas, ou terá que se ver comigo."
+      "dialogo_exemplo": "Hmph. Mantenha-se na linha.",
+      "conhecimentos_especificos": {
+        "sobre_topicos_gerais": [
+           {
+            "topico_chave_para_busca": ["perigos", "segurança", "estradas", "lobos", "bandidos"],
+            "detalhes": [
+              "A estrada leste anda mais perigosa que o normal. Vimos rastros de lobos grandes... maiores que o usual.",
+              "Também houve relatos de um grupo de bandidos perto da velha ponte quebrada. Mantenha os olhos abertos se for para aqueles lados."
+            ],
+            "tags_relacionadas": ["segurança", "estradas", "lobos", "bandidos", "perigo"]
+          }
+        ]
+      }
     }
   ],
   "locais": [
@@ -51,28 +149,42 @@
       "nome": "Taverna A Caneca Rachada",
       "descricao_longa": "A taverna é um lugar barulhento e esfumaçado, cheio de conversas animadas e o cheiro de cerveja e comida caseira. Mesas de madeira rústica estão espalhadas pelo salão principal, e um balcão robusto domina um dos lados, onde Borin serve seus clientes.",
       "npcs_presentes_padrao": ["npc_barman_gordo"],
-      "eventos_possiveis_aqui": ["ouvir um boato importante", "conseguir uma missão de Borin", "arrumar uma briga (se provocar)"]
+      "saidas": {
+        "porta da frente": "vila_pedra_alta_portao",
+        "loja de elara": "vila_pedra_alta_loja_elara"
+      },
+      "eventos_possiveis_aqui": ["ouvir um boato importante", "conseguir uma missão de Borin"]
     },
     {
       "id": "vila_pedra_alta_loja_elara",
       "nome": "Loja de Ervas da Elara",
-      "descricao_longa": "Um pequeno estabelecimento com prateleiras repletas de potes de vidro contendo ervas secas, pós coloridos e líquidos borbulhantes. O ar é preenchido com uma mistura de aromas doces e terrosos. Elara geralmente está atrás de um pequeno balcão, moendo ingredientes.",
+      "descricao_longa": "Um pequeno estabelecimento com prateleiras repletas de potes de vidro contendo ervas secas, pós coloridos e líquidos borbulhantes. O ar é preenchido com uma mistura de aromas doces e terrosos.",
       "npcs_presentes_padrao": ["npc_herbolaria_elara"],
-      "eventos_possiveis_aqui": ["comprar poções de cura", "iniciar a missão da 'Orvalho da Serpente'", "aprender sobre plantas locais"]
+      "saidas": {
+        "porta": "vila_pedra_alta_taverna" 
+      },
+      "eventos_possiveis_aqui": ["comprar poções de cura", "iniciar a missão da 'Orvalho da Serpente'"]
     },
     {
       "id": "vila_pedra_alta_portao",
       "nome": "Portão Principal de Pedra Alta",
-      "descricao_longa": "O portão principal da vila é feito de madeira grossa reforçada com ferro, ladeado por duas pequenas torres de vigia. Durante o dia, geralmente está aberto, com um ou dois guardas de plantão.",
+      "descricao_longa": "O portão principal da vila é feito de madeira grossa reforçada com ferro, ladeado por duas pequenas torres de vigia. Durante o dia, geralmente está aberto.",
       "npcs_presentes_padrao": ["npc_guarda_ranzinza"],
-      "eventos_possiveis_aqui": ["obter informações sobre os arredores", "ser impedido de entrar/sair dependendo da hora ou situação"]
+      "saidas": {
+        "dentro da vila": "vila_pedra_alta_taverna",
+        "fora da vila": "colinas_sussurrantes_entrada"
+      },
+      "eventos_possiveis_aqui": ["obter informações sobre os arredores"]
     },
     {
       "id": "colinas_sussurrantes_entrada",
       "nome": "Entrada das Colinas Sussurrantes",
-      "descricao_longa": "O caminho para as Colinas Sussurrantes começa aqui. A vegetação é mais densa e o vento parece carregar murmúrios estranhos. Pegadas de animais selvagens são visíveis na terra macia.",
+      "descricao_longa": "O caminho para as Colinas Sussurrantes começa aqui. A vegetação é mais densa e o vento parece carregar murmúrios estranhos.",
       "npcs_presentes_padrao": [],
-      "eventos_possiveis_aqui": ["encontrar rastros de lobos", "avistar as ruínas ao longe", "sentir uma presença estranha"]
+       "saidas": {
+        "voltar para a vila": "vila_pedra_alta_portao"
+      },
+      "eventos_possiveis_aqui": ["encontrar rastros de lobos", "avistar as ruínas ao longe"]
     }
   ],
   "regras_mundo_simples": [
